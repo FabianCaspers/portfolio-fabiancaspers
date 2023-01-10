@@ -1,0 +1,90 @@
+
+
+@import 'src/app/variables.scss';
+section {
+    z-index: 1;
+    position: relative;
+    color: white;
+    margin: 0 0 0 7rem;
+    display: flex;
+    align-items: center;
+    /* padding: 3rem 0 0 0; */
+    min-height: 100vh;
+    @media (max-width: 650px) {
+        margin: 0 0 0 2rem;
+        padding: 1rem 0 0 0;
+    }
+    @media (max-width: 390px) {
+        margin: 0 0 0 1rem;
+        padding: 3rem 0 0 0;
+    }
+}
+
+.left {
+    h1 {
+        margin: 0;
+    }
+    div {
+        display: flex;
+    }
+    .text1 {
+        width: 85%;
+        @media (max-width: "1000px") {
+            width: 100%;
+        }
+    }
+    .text2,
+    .text3 {
+        width: 73%;
+        @media (max-width: "1000px") {
+            width: 100%;
+        }
+    }
+    img {
+        object-fit: contain;
+        margin: 0 1rem 0 0;
+    }
+    @media (max-width: 1000px) {
+        margin: 0 7rem 0 0;
+    }
+    @media (max-width: 650px) {
+        margin: 0 2rem 0 0;
+    }
+    @media (max-width: 390px) {
+        margin: 0 1rem 0 0;
+    }
+}
+
+.right {
+    position: relative;
+    .border {
+        border-radius: 100%;
+        border: 5px solid $LightBlue;
+        margin: 0 7rem 0 0;
+        width: 20rem;
+        height: 20rem;
+        object-fit: cover;
+        @media (max-width: "1300px") {
+            width: 20rem;
+        }
+        @media (max-width: "1000px") {
+            display: none;
+        }
+    }
+    .strokeBlue {
+        position: absolute;
+        right: -9.5rem;
+        top: 50%;
+        @media (max-width: "1000px") {
+            display: none;
+        }
+    }
+    .blueShadow {
+        position: absolute;
+        right: 0;
+        z-index: -1;
+        top: -14rem;
+        width: 15rem;
+    }
+}
+
