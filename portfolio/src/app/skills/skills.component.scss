@@ -8,23 +8,29 @@ section {
     position: relative;
     justify-content: center;
     min-height: 100vh;
+
     @media (max-width: "1150px") {
         flex-direction: column-reverse;
         padding: 0 7rem 0 7rem;
     }
+
     @media (max-width: 650px) {
         padding: 2rem 2rem 0 2rem;
         gap: 0rem;
     }
+
     @media (max-width: 390px) {
         padding: 0 1rem 0 1rem;
     }
+
     @media (max-height: 600px) {
         padding: 2rem 1rem 0 1rem;
     }
+
     @media (max-height: 540px) {
         padding: 4rem 1rem 0 1rem;
     }
+
     @media (max-height: 480px) {
         padding: 6rem 1rem 0 1rem;
     }
@@ -35,13 +41,58 @@ section {
     align-items: flex-start;
     padding: 0px;
     gap: 54px;
-    width: 721px;
     height: 414.41px;
     left: 100px;
     top: 1838px;
     flex-wrap: wrap;
     margin-left: 100px;
+
+    .icon {
+        &:hover {
+            img {
+                animation: jump 1s cubic-bezier(0.42, 0, 0.7, 0.91) alternate;
+            }
+        }
+
+        img {
+            @media (max-width: 450px) {
+                width: 2rem;
+            }
+        }
+
+        @media (max-width: 450px) {
+            width: 20%;
+        }
+    }
+
+    @media (max-width: "1150px") {
+        margin: 0;
+        justify-content: center;
+    }
 }
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(-1rem);
+    }
+
+    40% {
+        transform: translateY(0);
+    }
+
+    60% {
+        transform: translateY(-1rem);
+    }
+
+    80% {
+        transform: translateY(0);
+    }
+}
+
 
 .skills {
     display: flex;
@@ -55,10 +106,11 @@ section {
 }
 
 .img-blue {
-    
+
     z-index: -1;
     top: 20rem;
     left: 0;
+
     @media (max-width: "1150px") {
         left: -7rem;
     }
@@ -87,6 +139,7 @@ button {
     font-size: 1.5rem;
     transition: all 125ms ease-in-out;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
     &:hover {
         padding: 1.5rem 2.5rem;
         background: #4B47FF;
