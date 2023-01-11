@@ -1,0 +1,95 @@
+@import 'src/app/variables.scss';
+
+section {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    @media (max-width: "1150px") {
+        flex-direction: column-reverse;
+        padding: 0 7rem 0 7rem;
+    }
+    @media (max-width: 650px) {
+        padding: 2rem 2rem 0 2rem;
+        gap: 0rem;
+    }
+    @media (max-width: 390px) {
+        padding: 0 1rem 0 1rem;
+    }
+    @media (max-height: 600px) {
+        padding: 2rem 1rem 0 1rem;
+    }
+    @media (max-height: 540px) {
+        padding: 4rem 1rem 0 1rem;
+    }
+    @media (max-height: 480px) {
+        padding: 6rem 1rem 0 1rem;
+    }
+}
+
+.left {
+    display: flex;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 54px;
+    width: 721px;
+    height: 414.41px;
+    left: 100px;
+    top: 1838px;
+    flex-wrap: wrap;
+    margin-left: 100px;
+}
+
+.skills {
+    display: flex;
+    width: 100vw;
+}
+
+.skills-headline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-blue {
+    
+    z-index: -1;
+    top: 20rem;
+    left: 0;
+    @media (max-width: "1150px") {
+        left: -7rem;
+    }
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80vw;
+    height: 279px;
+    color: white;
+}
+
+
+
+button {
+    color: white;
+    margin: 2rem;
+    border: 0;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    background: $LightBlue;
+    z-index: 1;
+    font-size: 1.5rem;
+    transition: all 125ms ease-in-out;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    &:hover {
+        padding: 1.5rem 2.5rem;
+        background: #4B47FF;
+        cursor: pointer;
+    }
+}
