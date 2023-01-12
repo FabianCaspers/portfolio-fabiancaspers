@@ -1,0 +1,86 @@
+@import '../variables.scss';
+section {
+    color: white;
+    position: relative;
+    @media (max-width: 390px) {
+        padding: 1rem 0 0 0;
+    }
+}
+
+.headline {
+    display: flex;
+    align-items: center;
+  
+    img {
+        margin-bottom: 25px;
+        width: 50px;
+        height: 4px;
+    }
+}
+
+.second-container {
+    display: flex;
+    width: 100vw;
+}
+
+.left {
+    width: 50vw;
+    margin-left: 99px;
+
+    span {
+        width: 473px;
+    }
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    margin-left: 50px;
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    button {
+        color: white;
+        margin: 2rem;
+        border: 0;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        background: $LightBlue;
+        z-index: 1;
+        font-size: 1.5rem;
+        transition: all 125ms ease-in-out;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    
+        &:hover {
+            
+            background: #4B47FF;
+            cursor: pointer;
+        }
+    }
+}
+
+input::placeholder {
+    color: white;
+    padding-left: 20px;
+  }
+  
+.input1 {
+    width: 617px;
+    height: 50px;
+    background: transparent;
+    border: 1px solid #4B47FF;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    
+}
+
+.input2 {
+    width: 617px;
+    height: 202px;
+    background: transparent;
+    border: 1px solid #4B47FF;
+    border-radius: 10px;
+}

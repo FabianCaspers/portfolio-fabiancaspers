@@ -126,3 +126,25 @@ h3 {
         cursor: pointer;
     }
 }
+
+.blueShadow {
+    position: absolute;
+    top: 0rem;
+    left: -3rem;
+    z-index: -1;
+    @media (max-width: 1600px) {
+        top: 37rem;
+    }
+    @media (max-width: 950px) {
+        top: 89rem;
+        width: 24rem;
+    }
+}
+
+.greenShadow {
+    position: absolute;
+    right: -30rem;
+    bottom: -22rem;
+    z-index: -1;
+    rotate: 80deg;
+}

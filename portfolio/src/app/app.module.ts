@@ -8,6 +8,7 @@ import { StartScreenComponent } from './start-screen/start-screen.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PortfolioSideComponent } from './portfolio-side/portfolio-side.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PortfolioSideComponent } from './portfolio-side/portfolio-side.componen
     StartScreenComponent,
     AboutMeComponent,
     SkillsComponent,
-    PortfolioSideComponent
+    PortfolioSideComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
