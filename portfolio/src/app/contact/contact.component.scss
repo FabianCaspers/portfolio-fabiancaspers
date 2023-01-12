@@ -2,6 +2,7 @@
 section {
     color: white;
     position: relative;
+    margin-bottom: 100px;
     @media (max-width: 390px) {
         padding: 1rem 0 0 0;
     }
@@ -83,4 +84,31 @@ input::placeholder {
     background: transparent;
     border: 1px solid #4B47FF;
     border-radius: 10px;
+}
+
+.goUpButton {
+    position: absolute;
+    right: 7rem;
+    bottom: -4rem;
+    transition: all 125ms ease-in-out;
+    &:hover {
+        scale: 1.1;
+        cursor: pointer;
+    }
+    @media (max-width: 650px) {
+        right: 2rem;
+    }
+    @media (max-width: 390px) {
+        right: 1rem;
+    }
+}
+
+.blueShadow {
+    position: absolute;
+    bottom: -19rem;
+    z-index: -1;
+    @media (max-width: 850px) {
+        bottom: -24rem;
+        width: 30rem;
+    }
 }
