@@ -28,28 +28,54 @@ section {
     top: 10rem;
     align-items: center;
     z-index: 1;
+    @media (max-width: "1350px") {
+        right: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        bottom: -9rem;
+        width: max-content;
+        top: unset;
+        height: 21rem;
+    }
+    @media (max-width: 1350px) and (max-height: 920px) {
+        bottom: -11rem;
+    }
 }
 
 .iAm {
     rotate: -90deg;
     font-size: 4.5rem;
     margin: 1rem -4rem 0 0;
+
+    @media (max-width: "900px") {
+        font-size: 32px;
+        margin: 1rem -1rem 0 0;
+    }
 }
 
 .name {
     font-size: 6.0rem;
     font-weight: 700;
+    @media (max-width: "900px") {
+        font-size: 45px;
+    }
 }
 
 .job {
-    font-size: 3.1rem;
+    font-size: 3.8rem;
     color: #4B47FF;
     position: relative;
     margin-top: -5px;
+    @media (max-width: "900px") {
+        font-size: 29px;
+    }
 }
 
 .iAmText {
     display: flex;
+    @media (max-width: "900px") {
+        margin-top: 30px;
+    }
 }
 
 .img {
@@ -58,6 +84,16 @@ section {
     height: 705px;
     width: 585px;
     top: 106px;
+
+    @media (max-width: "640px") {
+    display: flex;
+    position: absolute;
+    height: 705px;
+    width: 585px;
+    top: 145px;
+    left: -16vw;
+
+    }
 }
 
 
@@ -92,6 +128,9 @@ section {
 .picture {
     width: 29rem;
     margin: 0 0 0 7rem;
+    @media (max-width: 600px) {
+        margin: -5rem 0rem 0rem 2rem;
+    }
 }
 
 .shadow {
@@ -128,6 +167,28 @@ section {
     margin: 0 0 0 -0.3rem;
     z-index: 1;
     cursor: pointer;
+
+    @media (max-width: "1350px") {
+    position: absolute;
+    bottom: 0rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 0 0 -0.3rem;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+    }
+
+    .email {
+    
+        @media (max-width: "710px") {
+            display: none;
+        }
+    }
+
     a {
         text-decoration: none;
         color: white;
@@ -152,7 +213,9 @@ section {
             scale: 1.2;
         }
     }
-}
+
+
+
 
 .scrollDown {
     color: white;
@@ -170,6 +233,9 @@ section {
     &:hover {
         scale: 1.1;
         cursor: pointer;
+    }
+    @media (max-width: "1080px") {
+        display: none;
     }
     @media (max-width: "750px") {
         display: none;

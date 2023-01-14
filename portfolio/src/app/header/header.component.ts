@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
@@ -6,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @ViewChild('mobileMenuButton') mobileMenuButton!: ElementRef;
+  @ViewChild('mobileMenu') mobileMenu!: ElementRef;
 
   constructor() { }
+
+  openAndCloseMenu(){
+    this.mobileMenuButton.nativeElement.classList.toggle('active');
+    this.mobileMenu.nativeElement.classList.toggle('show');
+  }
 
   ngOnInit(): void {
   }

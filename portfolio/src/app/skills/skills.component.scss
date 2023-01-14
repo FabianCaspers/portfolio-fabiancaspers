@@ -47,6 +47,17 @@ section {
     flex-wrap: wrap;
     margin-left: 100px;
 
+    @media (max-width: 740px) {
+        padding: 0;
+        padding-bottom: 20rem;
+        padding-right: 3rem;
+    }
+
+    @media (max-width: "1150px") {
+        width: 50vw;
+        height: 451px;
+    }
+
     .icon {
         &:hover {
             img {
@@ -58,10 +69,18 @@ section {
             @media (max-width: 450px) {
                 width: 2rem;
             }
+
+            @media (max-width: 750px) {
+                width: 4rem;
+            }
+
+            @media (max-width: 1028px) {
+                width: 4rem;
+            }
         }
 
         @media (max-width: 450px) {
-            width: 20%;
+            width: 14%;
         }
     }
 
@@ -97,6 +116,15 @@ section {
 .skills {
     display: flex;
     width: 100vw;
+
+    @media (max-width: "1150px") {
+        flex-direction: column-reverse;
+    }
+
+    @media (max-width: 740px) {
+        padding: 0;
+        padding-top: 10rem;
+    }
 }
 
 .skills-headline {
@@ -114,6 +142,13 @@ section {
     @media (max-width: "1150px") {
         left: -7rem;
     }
+
+    @media (max-width: 740px) {
+        left: 0rem;
+        position: absolute;
+        top: 12.5rem;
+        padding-left: 20rem;
+    }
 }
 
 .right {
@@ -124,6 +159,8 @@ section {
     width: 80vw;
     height: 279px;
     color: white;
+
+
 }
 
 
@@ -139,6 +176,20 @@ button {
     font-size: 1.5rem;
     transition: all 125ms ease-in-out;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @media (max-width: 600px) {
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+        top: 40rem !important;
+        display: flex;
+    }
+
+    @media (max-width: "1150px") {
+        display: flex;
+        position: relative;
+        top: 37rem;
+    }
+
 
     &:hover {
         padding: 1.5rem 2.5rem;
