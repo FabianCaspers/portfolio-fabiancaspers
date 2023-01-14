@@ -49,9 +49,16 @@ section {
 
     @media (max-width: 740px) {
         padding: 0;
-        padding-bottom: 20rem;
+        padding-bottom: 5rem;
         padding-right: 3rem;
     }
+
+    @media (min-width: 741px) {
+        padding: 0;
+       
+        padding-right: 14rem;
+    }
+
 
     @media (max-width: "1150px") {
         width: 50vw;
@@ -136,19 +143,35 @@ section {
 .img-blue {
 
     z-index: -1;
-    top: 20rem;
+    top: -5rem;
     left: 0;
+    position: relative;
 
     @media (max-width: "1150px") {
-        left: -7rem;
+        left: 26rem;
+        position: relative;
+        top: 8rem;
+    }
+
+    @media (max-width: 1024px) {
+        left: 22rem;
+        position: relative;
+        top: 8rem;
+    }
+
+    @media (min-width: 760px) {
+        left: 14rem;
+        position: relative;
+        top: -10rem;
     }
 
     @media (max-width: 740px) {
         left: 0rem;
         position: absolute;
-        top: 12.5rem;
-        padding-left: 20rem;
+        top: 5rem;
+        padding-left: 21rem;
     }
+
 }
 
 .right {
@@ -160,6 +183,14 @@ section {
     height: 279px;
     color: white;
 
+    @media (max-width: 821px) {
+        left: -17rem;
+        position: absolute;
+        top: -1.5rem;
+        padding-left: 20rem;
+        padding-top: 4rem;
+
+    }
 
 }
 
@@ -177,11 +208,29 @@ button {
     transition: all 125ms ease-in-out;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 
-    @media (max-width: 600px) {
+
+    @media (max-width: 730px) {
         font-size: 1rem;
         padding: 1rem 1.5rem;
         top: 40rem !important;
         display: flex;
+        left: -1rem;
+    }
+
+    @media (min-width: 731px) {
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+        top: 36rem !important;
+        display: flex;
+        left: 2rem;
+    }
+
+    @media (min-width: 821px) {
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+        top: 42rem !important;
+        display: flex;
+        left: -7rem;
     }
 
     @media (max-width: "1150px") {

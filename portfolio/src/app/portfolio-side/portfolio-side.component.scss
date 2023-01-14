@@ -94,6 +94,11 @@ section {
         justify-content: center;
         align-items: center;
     }
+    @media (max-width: 821px) {
+        justify-content: center;
+        align-items: center;
+        margin-left: 1rem;
+    }
 }
 
 .project-description-reverse {
@@ -105,8 +110,14 @@ section {
     @media (max-width: 740px) {
         justify-content: center;
         align-items: center;
-        width: 100vw;
+        
         margin-left: -6rem;
+    }
+    @media (max-width: 821px) {
+        justify-content: center;
+        align-items: center;
+        
+        margin-left: -7rem;
     }
 }
 
