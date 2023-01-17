@@ -18,11 +18,11 @@
         </div>
 
         <div class="right">
-            <form action="">
-                <input translate class="input1" type="text" id="name" placeholder="Your name">
-                <input translate class="input1" type="email" id="mail" placeholder="Your email">
-                <input translate class="input2" type="text" id="message" placeholder="Your message">
-                <button translate>Send message :)</button>
+            <form (submit)="sendMail()" ngNativeValidate #myForm>
+                <input required #nameField translate name="name" class="input1" type="text" id="name" placeholder="Your name">
+                <input required translate class="input1" type="email" id="mail" placeholder="Your email">
+                <input required #messageField translate name="message" class="input2" type="text" id="message" placeholder="Your message">
+                <button #sendButton translate>Send message :)</button>
             </form>
         </div>
         <img class="goUpButton" (click)="scrollToTop()" src="assets/icons/goUpButton.png" alt="goUpButton">
