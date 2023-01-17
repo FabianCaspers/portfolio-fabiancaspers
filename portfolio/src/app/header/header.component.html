@@ -1,11 +1,11 @@
 <header>
-    <span class="name"><p>F</p>ab<div class="lightBlue">i</div>an<div class="spaceLeft">Ca</div><p>sp</p>er<div class="lightBlue">s</div></span>
+    <span (click)="scrollToTop()" class="name"><p>F</p>ab<div class="lightBlue">i</div>an<div class="spaceLeft">Ca</div><p>sp</p>er<div class="lightBlue">s</div></span>
     <div class="menu">
         <a href="#aboutMe" class="noselect" translate>About me</a>
         <a href="#mySkills" class="noselect" translate>Skills</a>
         <a href="#portfolio" class="noselect">Portfolio</a>
-        <a class="noselect">EN</a>
-        <a class="noselect">DE</a>
+        <a (click)="translateEN();" class="noselect">EN</a>
+        <a (click)="translateDE();" class="noselect">DE</a>
     </div>
 
     <div class="mobileMenuButton" (click)="openAndCloseMenu()"  #mobileMenuButton>
@@ -21,10 +21,10 @@
         </svg>
     </div>
     <div class="mobileMenu" #mobileMenu>
-        <a href="#aboutMe"  class="noselect" translate>About me</a>
-        <a href="#mySkills"  class="noselect" translate>Skills</a>
-        <a href="#portfolio"  class="noselect">Portfolio</a>
-        <a class="noselect">EN</a>
-        <a class="noselect">DE</a>
+        <a href="#aboutMe" (click)="openAndCloseMenu()" class="noselect" translate>About me</a>
+        <a href="#mySkills" (click)="openAndCloseMenu()" class="noselect" translate>Skills</a>
+        <a href="#portfolio" (click)="openAndCloseMenu()" class="noselect">Portfolio</a>
+        <a (click)="translateEN();" class="noselect" (click)="openAndCloseMenu()">EN</a>
+        <a (click)="translateDE();" class="noselect" (click)="openAndCloseMenu()">DE</a>
     </div>
 </header>
