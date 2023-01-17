@@ -6,7 +6,7 @@
 	"Contact": "Kontakt",
 	"Got a problem to solve?": "Haben Sie ein Problem zu lösen?",
 	"Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.": "Kontaktieren Sie mich über dieses Formular, denn ich bin daran interessiert Ihnen zuzuhören und Ihre Ideen kennen zu lernen und mit meiner Arbeit zu Ihren Projekten beitragen zu können.",
-	"Need a Frontend developer?": "Brauchen Sie einen Frontend Developer?",
+	"Need a Frontend developer? Contact me!": "Brauchen Sie einen Frontend Developer? Kontaktiere mich!",
 	"Send message :)": "Nachricht senden :)",
 	"Imprint": "Impressum",
 	"Skills": "Skills",
@@ -22,5 +22,9 @@
 	"Your name": "Dein Name",
 	"Your email": "Deine Email",
 	"Your message": "Deine Nachricht",
-	"Contact me!": "Kontaktiere mich!"
+	"You have to enter a name": "Du musst einen Namen eingeben",
+	"You have to write at least": "Du musst mindestens ein Wort schreiben",
+	"You have to enter an email": "Du musst eine Email eintragen",
+	"This email is incorrect": "Diese Email ist nicht korrekt",
+	"You have to write a message": "Du musst eine Nachricht schreiben"
 }

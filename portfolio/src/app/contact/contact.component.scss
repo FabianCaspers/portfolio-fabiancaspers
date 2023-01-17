@@ -10,6 +10,45 @@ section {
     }
 }
 
+.content {
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    position: relative;
+    @media (max-width: 850px) {
+        flex-direction: column;
+    }
+    .left {
+        margin: 0 0 0 7rem;
+        width: 40%;
+        h2 {
+            font-size: 2rem;
+            margin-top: 0;
+            @media (max-width: 520px) {
+                font-size: 1.75rem;
+            }
+            @media (max-width: 450px) {
+                font-size: 1.5rem;
+            }
+            @media (max-width: 390px) {
+                font-size: 1.25rem;
+            }
+        }
+        @media (max-width: 850px) {
+            margin: 0 7rem 0 7rem;
+            width: calc( 100% - 14rem);  
+        }
+        @media (max-width: 650px) {
+            margin: 0 2rem 0 2rem;
+            width: calc( 100% - 4rem);           
+        }
+        @media (max-width: 390px) {
+            margin: 0 1rem 0 1rem;
+            width: auto; 
+        }
+    }
+}
+
 .headline {
     display: flex;
     align-items: center;
@@ -238,6 +277,25 @@ input::placeholder {
 
     @media (max-width: 390px) {
         right: 1rem;
+    }
+}
+
+h1 {
+    position: relative;
+    margin: 6rem 0 0 7rem;
+    .stroke {
+        position: absolute;
+        left: -7rem;
+        top: 50%;
+        @media (max-width: 650px) {
+            left: -7.9rem;
+        }
+    }
+    @media (max-width: 650px) {
+        margin: 6rem 0 0 2rem;
+    }
+    @media (max-width: 390px) {
+        margin: 6rem 0 0 3rem;
     }
 }
 

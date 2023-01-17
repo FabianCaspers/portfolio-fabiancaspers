@@ -1,32 +1,55 @@
-<section id="contact">
 
-    <div class="headline">
+<section id="contact" #contact>
+    <div>
         <h1 translate>
-            <img src="assets/icons/blueLineShort.png" alt="">
             Contact
+            <img class="stroke" src="assets/icons/blueLineShort.png" alt="StrokePurple">
         </h1>
-    </div>
-
-    <div class="second-container">
-        <div class="left">
-
-            <h2 translate>Got a problem to solve?</h2>
-            <span translate>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to
-                your projects with my work.</span> <br>
-            <span translate>Need a Frontend developer? <b translate>Contact me!</b></span>
-
-        </div>
-
-        <div class="right">
-            <form (submit)="sendMail()" ngNativeValidate #myForm>
-                <input required #nameField translate name="name" class="input1" type="text" id="name" placeholder="Your name">
-                <input required translate class="input1" type="email" id="mail" placeholder="Your email">
-                <input required #messageField translate name="message" class="input2" type="text" id="message" placeholder="Your message">
-                <button #sendButton translate>Send message :)</button>
-            </form>
+        <div class="content">
+            <div class="left">
+                <h2 translate>Got a problem to solve?</h2>
+                <p translate>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</p>
+                <p translate>Need a Frontend developer? Contact me!</p>
+            </div>
+            <div class="right">
+                <form [formGroup]="contactForm" (submit)="sendMail()">
+                    <!-- <p>{{ contactForm.value | json }}</p> -->
+                    <p class="green" *ngIf="mailSent" translate>Message sent successfully</p>
+                    <input formControlName="name" class="name" placeholder="Your name" type="text" #name id="name">
+                    <ng-container *ngIf="contactForm.controls['name'] as name">
+                        <ng-container *ngIf="name.dirty || name.touched ">
+                            <ng-container *ngIf="name.errors as errors">
+                                <p class="error" *ngIf="errors?.['required']" translate>You have to enter a name</p>
+                                <p class="error" *ngIf="errors?.['minlength']"><span translate>You have to write at least</span> {{ errors?.['minlength'].requiredLength }} <span translate>letters</span></p>
+                                <!-- <p>{{ errors | json}}</p> -->
+                            </ng-container>
+                        </ng-container>
+                    </ng-container>
+                    <input formControlName="mail" class="mail" placeholder="Your email" type="mail" #mail id="mail">
+                    <ng-container *ngIf="contactForm.controls['mail'] as mail">
+                        <ng-container *ngIf="mail.dirty || mail.touched ">
+                            <ng-container *ngIf="mail.errors as errors">
+                                <p class="error" *ngIf="errors?.['required']" translate>You have to enter an email</p>
+                                <p class="error" *ngIf="errors?.['minlength']"><span translate>You have to write at least</span> {{ errors?.['minlength'].requiredLength }} <span translate>letters</span></p>
+                                <p class="error" *ngIf="!errors?.['minlength'] && errors?.['email']" translate>This email is incorrect</p>
+                            </ng-container>
+                        </ng-container>
+                    </ng-container>
+                    <textarea formControlName="message" class="message" placeholder="Your message" #message id="message"></textarea>
+                    <ng-container *ngIf="contactForm.controls['message'] as message">
+                        <ng-container *ngIf="message.dirty || message.touched ">
+                            <ng-container *ngIf="message.errors as errors">
+                                <p class="error" *ngIf="errors?.['required']" translate>You have to write a message </p>
+                                <p class="error" *ngIf="errors?.['minlength']"><span translate>You have to write at least</span> {{ errors?.['minlength'].requiredLength }} <span translate>letters</span></p>
+                            </ng-container>
+                        </ng-container>
+                    </ng-container>
+                    <button [disabled]="!(contactForm.valid && (contactForm.dirty || contactForm.touched))" type="submit" class="greenButton" #button translate>Send message :)</button>
+                </form>
+            </div>
         </div>
         <img class="goUpButton" (click)="scrollToTop()" src="assets/icons/goUpButton.png" alt="goUpButton">
     </div>
     <img class="blueShadow" src="assets/shadows/blueShadow3.png" alt="blueShadow">
-
 </section>
+

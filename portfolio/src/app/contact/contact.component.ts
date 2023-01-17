@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -8,8 +9,11 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 export class ContactComponent implements OnInit {
   @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
+  @ViewChild('mail') mail!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendButton') sendButton!: ElementRef;
+
+  public mailSent: boolean = false;
 
   constructor() { }
 
@@ -20,6 +24,22 @@ export class ContactComponent implements OnInit {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
+
+  public contactForm: FormGroup =  new FormGroup({
+    name: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+    ], []),
+    mail: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+      Validators.email,
+    ], []),
+    message: new FormControl('', [
+      Validators.required,
+      Validators.minLength(3),
+    ], []),
+  })
 
   async sendMail() {
    // action="https://fabian-caspers.developerakademie.net/Portfolio/send_mail.php"
@@ -37,7 +57,7 @@ export class ContactComponent implements OnInit {
 
    // Senden
 
-   await fetch('https://fabian-caspers.developerakademie.net/Portfolio/send_mail.php'),
+   await fetch('https://fabian-caspers.developerakademie.net/send_mail.php'),
    {
     method: 'POST',
     body: fd
