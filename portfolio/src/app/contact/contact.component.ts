@@ -57,7 +57,7 @@ export class ContactComponent implements OnInit {
 
    // Senden
 
-   await fetch('https://fabian-caspers.developerakademie.net/send_mail.php'),
+   await fetch('https://w01da36d.kasserver.com/send_mail.php'),
    {
     method: 'POST',
     body: fd
