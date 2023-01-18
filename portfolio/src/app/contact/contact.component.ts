@@ -55,7 +55,7 @@ export class ContactComponent implements OnInit {
    fd.append('name', nameField.value);
    fd.append('message', messageField.value);
 
-   // Senden 
+   // Senden .
 
    await fetch('https://fabiancaspers.com/send_mail.php'),
    {
