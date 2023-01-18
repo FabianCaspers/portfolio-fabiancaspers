@@ -55,9 +55,9 @@ export class ContactComponent implements OnInit {
    fd.append('name', nameField.value);
    fd.append('message', messageField.value);
 
-   // Senden
+   // Senden 
 
-   await fetch('https://w01da36d.kasserver.com/send_mail.php'),
+   await fetch('https://fabiancaspers.com/send_mail.php'),
    {
     method: 'POST',
     body: fd
