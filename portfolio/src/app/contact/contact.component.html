@@ -12,7 +12,7 @@
                 <p translate>Need a Frontend developer? Contact me!</p>
             </div>
             <div class="right">
-                <form [formGroup]="contactForm" (submit)="sendMail()">
+                <form #myForm [formGroup]="contactForm" (submit)="sendMail()">
                     <!-- <p>{{ contactForm.value | json }}</p> -->
                     <p class="green" *ngIf="mailSent" translate>Message sent successfully</p>
                     <input formControlName="name" class="name" placeholder="Your name" type="text" #name id="name">
