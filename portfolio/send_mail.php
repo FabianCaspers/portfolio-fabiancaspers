@@ -37,7 +37,8 @@ switch ($_SERVER['REQUEST_METHOD']) {
     case ("POST"): //Send the email;
 
         $subject = "Contact From " . $_POST['name'];
-        $headers = "From:  fabian.caspers1308@gmail.com";
+        $headers = "From: " .$_POST['mail'];
+       
 
         mail($recipient, $subject, $_POST['message'], $headers);
         header("Location: " . $redirect); 
@@ -46,4 +47,5 @@ switch ($_SERVER['REQUEST_METHOD']) {
     default: //Reject any non POST or OPTIONS requests.
         header("Allow: POST", true, 405);
         exit;
-}
+} 
+
