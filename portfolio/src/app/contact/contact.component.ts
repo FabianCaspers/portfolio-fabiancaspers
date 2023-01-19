@@ -9,13 +9,20 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 export class ContactComponent implements OnInit {
   @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
-  @ViewChild('mail') mail!: ElementRef;
+  @ViewChild('mailField') mail!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendButton') sendButton!: ElementRef;
+  
 
   public mailSent: boolean = false;
 
   constructor() { }
+
+  ngAfterViewInit() {
+    this.nameField.nativeElement.disabled = false;
+    this.messageField.nativeElement.disabled = false;
+    this.sendButton.nativeElement.disabled = false;
+  }
 
   ngOnInit(): void {
   }
@@ -58,7 +65,7 @@ export class ContactComponent implements OnInit {
    fd.append('message', messageField.value);
    fd.append('mail', mail.value);
 
-   // Senden .
+   // Senden . 
 
    await fetch('https://fabiancaspers.com/send_mail.php'),
    {
