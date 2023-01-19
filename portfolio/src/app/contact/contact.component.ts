@@ -47,13 +47,16 @@ export class ContactComponent implements OnInit {
    let nameField = this.nameField.nativeElement;
    let messageField = this.messageField.nativeElement;
    let sendButton = this.sendButton.nativeElement;
+   let mail = this.mail.nativeElement;;
    nameField.disabled = true;
    messageField.disabled = true;
    sendButton.disabled = true;
+   mail.disabled = true;
 
    let fd = new FormData();
    fd.append('name', nameField.value);
    fd.append('message', messageField.value);
+   fd.append('mail', mail.value);
 
    // Senden .
 
@@ -67,6 +70,7 @@ export class ContactComponent implements OnInit {
    nameField.disabled = false;
    messageField.disabled = false;
    sendButton.disabled = false;
+   mail.disabled = false;
   }
 
 }
