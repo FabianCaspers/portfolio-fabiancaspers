@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -7,12 +7,13 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  [x: string]: any;
   @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('mailField') mail!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendButton') sendButton!: ElementRef;
-  
+
 
   public mailSent: boolean = false;
 
@@ -32,7 +33,7 @@ export class ContactComponent implements OnInit {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
 
-  public contactForm: FormGroup =  new FormGroup({
+  public contactForm: FormGroup = new FormGroup({
     name: new FormControl('', [
       Validators.required,
       Validators.minLength(3),
@@ -48,39 +49,40 @@ export class ContactComponent implements OnInit {
     ], []),
   })
 
+  /*
   async sendMail() {
-   // action="https://fabian-caspers.developerakademie.net/Portfolio/send_mail.php"
-   console.log('Sending mail', this.myForm);
-   let nameField = this.nameField.nativeElement;
-   let messageField = this.messageField.nativeElement;
-   let sendButton = this.sendButton.nativeElement;
-   let mail = this.mail.nativeElement;;
-   nameField.disabled = true;
-   messageField.disabled = true;
-   sendButton.disabled = true;
-   mail.disabled = true;
-
-   let fd = new FormData();
-   fd.append('name', nameField.value);
-   fd.append('message', messageField.value);
-   fd.append('mail', mail.value);
-
-   // Senden . 
-
-   await fetch('https://fabiancaspers.com/send_mail.php'),
-   {
-    method: 'POST',
-    body: fd
-
+    // action="https://fabian-caspers.developerakademie.net/Portfolio/send_mail.php"
+    console.log('Sending mail', this.myForm);
+    let nameField = this.nameField.nativeElement;
+    let messageField = this.messageField.nativeElement;
+    let sendButton = this.sendButton.nativeElement;
+    let mail = this.mail.nativeElement;
+    nameField.disabled = true;
+    messageField.disabled = true;
+    sendButton.disabled = true;
+    mail.disabled = true;
+ 
+    let fd = new FormData();
+    fd.append('name', nameField.value);
+    fd.append('message', messageField.value);
+    fd.append('mail', mail.value);
+ 
+    // Senden . 
+ 
+    await fetch('https://fabiancaspers.com/send_mail.php'),
+    {
+     method: 'POST',
+     body: fd
+ 
+    }
+ 
+    nameField.disabled = false;
+    messageField.disabled = false;
+    sendButton.disabled = false;            
+    mail.disabled = false;
    }
-
-   nameField.disabled = false;
-   messageField.disabled = false;
-   sendButton.disabled = false;
-   mail.disabled = false;
-  }
-
-}
+  } */
+    
 
 
 /* 
@@ -131,23 +133,25 @@ export class ContactComponent implements OnInit, AfterViewInit {
     document.body.scrollTop = 0; 
     document.documentElement.scrollTop = 0; 
   }
-
+*/
   async sendMail() {
     if (this.contactForm.valid) {      console.log('Sending mail', this.myForm);
       const nameField = this.nameField.nativeElement;
       const messageField = this.messageField.nativeElement;
       const sendButton = this.sendButton.nativeElement;
+      const mail = this.mail.nativeElement;
       nameField.disabled = true;
       messageField.disabled = true;
       sendButton.disabled = true;
+      mail.disabled = true;
 
       const fd = new FormData();
       fd.append('name', nameField.value);
       fd.append('message', messageField.value);
-      fd.append('mail', this.contactForm.get('mail').value);
+      fd.append('mail', mail.value);
 
       try {
-        const response = await fetch('https://w01da36d.kasserver.com/send_mail.php', {
+        const response = await fetch('https://fabiancaspers.com/send_mail.php', {
           method: 'POST',
           body: fd
         });
@@ -162,8 +166,9 @@ export class ContactComponent implements OnInit, AfterViewInit {
         nameField.disabled = false;
         messageField.disabled = false;
         sendButton.disabled = false;
+        mail.disabled = false;
       }
     }
   }
 }
-*/
+
