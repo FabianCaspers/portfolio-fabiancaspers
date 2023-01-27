@@ -28,14 +28,14 @@ section {
         display: flex;
     }
     .text1 {
-        width: 85%;
+        width: 60%;
         @media (max-width: "1000px") {
             width: 100%;
         }
     }
     .text2,
     .text3 {
-        width: 73%;
+        width: 60%;
         @media (max-width: "1000px") {
             width: 100%;
         }
