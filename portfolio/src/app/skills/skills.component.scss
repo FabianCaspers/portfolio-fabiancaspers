@@ -7,7 +7,7 @@ section {
     gap: 4rem;
     position: relative;
     justify-content: center;
-    min-height: 60vh;
+    min-height: 100vh;
 
     @media (max-width: "1150px") {
         flex-direction: column-reverse;
@@ -186,13 +186,19 @@ section {
     height: 279px;
     color: white;
 
+    h1 {
+        font-size: 5.5rem;
+    }
+
     @media (max-width: 821px) {
         left: -17rem;
         position: absolute;
         top: -1.5rem;
         padding-left: 20rem;
         padding-top: 4rem;
-
+        h1 {
+            font-size: 3.5rem;
+        }
     }
 
 }
