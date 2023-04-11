@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-portfolio-side',
@@ -10,6 +12,7 @@ export class PortfolioSideComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    AOS.init();
   }
 
 }

@@ -1,12 +1,12 @@
 
 <section id="contact" #contact>
     <div>
-        <h1 translate>
+        <h1 data-aos="fade-right" translate>
             Contact
             <img class="stroke" src="assets/icons/blueLineShort.png" alt="StrokePurple">
         </h1>
         <div class="content">
-            <div class="left">
+            <div data-aos="fade-up" class="left">
                 <h2 translate>Got a problem to solve?</h2>
                 <p translate>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</p>
                 <p translate>Need a Frontend developer? Contact me!</p>
@@ -15,7 +15,7 @@
                 <form #myForm [formGroup]="contactForm" (submit)="sendMail()">
                     <!-- <p>{{ contactForm.value | json }}</p> -->
                     <p class="green" *ngIf="mailSent" translate>Message sent successfully</p>
-                    <input formControlName="name" class="name" placeholder="Your name" type="text" #nameField id="name">
+                    <input data-aos="fade-left" formControlName="name" class="name" placeholder="Your name" type="text" #nameField id="name">
                     <ng-container *ngIf="contactForm.controls['name'] as name">
                         <ng-container *ngIf="name.dirty || name.touched ">
                             <ng-container *ngIf="name.errors as errors">
@@ -25,7 +25,7 @@
                             </ng-container>
                         </ng-container>
                     </ng-container>
-                    <input formControlName="mail" class="mail" placeholder="Your email" type="mail" #mailField id="mail">
+                    <input data-aos="fade-left" formControlName="mail" class="mail" placeholder="Your email" type="mail" #mailField id="mail">
                     <ng-container *ngIf="contactForm.controls['mail'] as mail">
                         <ng-container *ngIf="mail.dirty || mail.touched ">
                             <ng-container *ngIf="mail.errors as errors">
@@ -35,7 +35,7 @@
                             </ng-container>
                         </ng-container>
                     </ng-container>
-                    <textarea formControlName="message" class="message" placeholder="Your message" #messageField id="message"></textarea>
+                    <textarea data-aos="fade-left" formControlName="message" class="message" placeholder="Your message" #messageField id="message"></textarea>
                     <ng-container *ngIf="contactForm.controls['message'] as message">
                         <ng-container *ngIf="message.dirty || message.touched ">
                             <ng-container *ngIf="message.errors as errors">
@@ -44,11 +44,11 @@
                             </ng-container>
                         </ng-container>
                     </ng-container>
-                    <button [disabled]="!(contactForm.valid && (contactForm.dirty || contactForm.touched))" type="submit" class="greenButton" #sendButton translate>Send message :)</button>
+                    <button data-aos="fade-left" [disabled]="!(contactForm.valid && (contactForm.dirty || contactForm.touched))" type="submit" class="greenButton" #sendButton translate>Send message :)</button>
                 </form>
             </div>
         </div>
-        <img class="goUpButton" (click)="scrollToTop()" src="assets/icons/goUpButton.png" alt="goUpButton">
+        <img data-aos="fade-up" class="goUpButton" (click)="scrollToTop()" src="assets/icons/goUpButton.png" alt="goUpButton">
     </div>
     <img class="blueShadow" src="assets/shadows/blueShadow3.png" alt="blueShadow">
 </section>

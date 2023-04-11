@@ -1,5 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-contact',
@@ -26,6 +28,7 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    AOS.init();
   }
 
   scrollToTop() {
