@@ -4,6 +4,7 @@ section {
     color: white;
     position: relative;
     margin-bottom: 100px;
+    top: 15rem;
 
     @media (max-width: 390px) {
         padding: 1rem 0 0 0;
@@ -261,10 +262,11 @@ input::placeholder {
 }
 
 .goUpButton {
-    position: absolute;
-    right: 7rem;
-    bottom: -4rem;
+    position: relative;
+    right: 5rem;
+    bottom: 0;
     transition: all 125ms ease-in-out;
+    left: 91%;
 
     &:hover {
         scale: 1.1;

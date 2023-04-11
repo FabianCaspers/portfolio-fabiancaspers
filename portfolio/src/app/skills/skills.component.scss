@@ -3,11 +3,12 @@
 section {
     color: white;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 4rem;
     position: relative;
     justify-content: center;
-    min-height: 100vh;
+    // height: 100vh;
+    top: 15rem;
 
     @media (max-width: "1150px") {
         flex-direction: column-reverse;
@@ -41,11 +42,12 @@ section {
     align-items: flex-start;
     padding: 0px;
     gap: 54px;
-    height: 414.41px;
+    // height: 414.41px;
     left: 100px;
     top: 1838px;
     flex-wrap: wrap;
     margin-left: 100px;
+    justify-content: center;
 
     @media (max-width: 740px) {
         padding: 0;

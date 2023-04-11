@@ -1,5 +1,11 @@
 @import '../variables.scss';
 
+footer {
+    top: 17rem;
+    bottom: 0;
+    position: relative;
+}
+
 .footer {
     width: 100vw;
     height: 291px;
