@@ -86,6 +86,10 @@ section {
         z-index: -1;
         top: -14rem;
         width: 15rem;
+        @media (max-width: "700px") {
+            top: 6rem;
+            width: 12rem;
+        }
     }
 }
 
